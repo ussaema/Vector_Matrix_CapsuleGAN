@@ -23,3 +23,11 @@ An early stopping under the condition that the loss of the validation set has no
 ![enter image description here](https://github.com/ussaema/Vector_Matrix_CapsuleGAN/blob/master/imgs/disc_archi_vcapsgan.png?raw=true)
 ## Scores
 ![enter image description here](https://github.com/ussaema/Vector_Matrix_CapsuleGAN/blob/master/imgs/scores.png?raw=true)
+
+#### Copyright & License
+
+Copyright (C) 2018 Oussema Dhaouadi - TUM
+
+Licensed under MIT License
+
+See the  [LICENSE](https://github.com/ussaema/Vector_Matrix_CapsuleGAN/blob/master/LICENSE).
