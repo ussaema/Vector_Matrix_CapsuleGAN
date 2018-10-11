@@ -1,0 +1,15 @@
+Inception score computed based on the pretrained Inception model from http://download.tensorflow.org/models/image/imagenet/inception-2015-12-05.tgz
+Though Inception Network is trained on ImageNet and is only suitable for CIFAR-10, we use the same network to compute the IS on MNIST and SmallNORB.
+___INCEPTION_SCORE__________________________________________________________________________________________________________________
+
+CIFAR10
+Inception Score for 49984 samples in 10 splits
+IS: mean 11.275917053222656, stdv 0.12560559809207916
+
+smallnorb
+Inception Score for 24256 samples in 10 splits
+IS: mean 4.592876434326172, stdv 0.0699758231639862
+
+MNIST
+Inception Score for 59968 samples in 10 splits
+IS: mean 2.145897388458252, stdv 0.023971695452928543

@@ -1,0 +1,49 @@
+DATASET:
+{'name': 'smallNORB', 'train': <__main__.DataLoader object at 0x7f9343834860>, 'test': <__main__.DataLoader object at 0x7f9343834828>, 'set': 'test', 'param': {'target_scale': [-1, 1], 'target_shape': None, 'target_size': [48, 48, 1], 'one_hot': True, 'target_patch': None}}
+ 
+GENERATOR:
+{'name': 'generator', 'train': None, 'param': {'DeConvNet': {'A': 8, 'optimizer': <keras.optimizers.Adam object at 0x7f9343982dd8>, 'iters': 1}, 'output_shape': (48, 48, 1), 'inputs_shape': (100,), 'topology': 'ConvNet'}, 'eval': None}
+ 
+DISCRIMINATOR:
+{'name': 'discriminator', 'train': None, 'param': {'MCapsNet': {'pose_shape': [4, 4], 'L2_n': 8, 'L3_n': 8, 'optimizer': <keras.optimizers.Adam object at 0x7f9343982f60>, 'L1_n': 8, 'L4_n': 8, 'decoder': False, 'iters': 1, 'routing_iters': 2}, 'inputs_shape': (48, 48, 1), 'Critic': {'optimizer': None, 'decoder': None, 'iters': 5}, 'VCapsNet': {'decoder_factor': 0.0005, 'L5_n': 1024, 'L2_n': 32, 'L2_dim': 8, 'optimizer': <keras.optimizers.Adam object at 0x7f9343982e10>, 'L1_n': 256, 'L4_n': 512, 'L3_dim': 16, 'decoder': False, 'iters': 1, 'routing_iters': 3}, 'topology': 'ConvNet', 'output_shape': (2,), 'ConvNet': {'optimizer': <keras.optimizers.Adam object at 0x7f9343982da0>, 'decoder': None, 'iters': 1}}, 'eval': None}
+ 
+COMBINED:
+{'name': 'gan', 'train': None, 'param': {'topology': 'DCGAN'}, 'iters': 1, 'eval': None}
+ 
+TRAIN:
+{'models_to_train': {'generator': None, 'discriminator': None}, 'trained_models': {'D': None, 'G': None}, 'debug': False, 'param': {'epochs': 100, 'train_samples': 24300, 'checkpoint': {'interval': None, 'models': {'save': True}, 'logdir': './ConvNet_GAN_smallNORB_09-05_10-42/'}, 'batch_size': 100}}
+
+296ms/step
+
+__________________________________________________________________________________________________
+Layer (type)                    Output Shape         Param #     Connected to                     
+==================================================================================================
+input_4 (InputLayer)            (None, 48, 48, 1)    0                                            
+__________________________________________________________________________________________________
+input_5 (InputLayer)            (None, 48, 48, 1)    0                                            
+__________________________________________________________________________________________________
+model_3 (Model)                 (None, 2)            676352      input_4[0][0]                    
+                                                                 input_5[0][0]                    
+==================================================================================================
+Total params: 676,352
+Trainable params: 675,584
+Non-trainable params: 768
+__________________________________________________________________________________________________
+ConvNet_Up compiled
+ConvNet compiled
+_________________________________________________________________
+Layer (type)                 Output Shape              Param #   
+=================================================================
+input_6 (InputLayer)         (None, 100)               0         
+_________________________________________________________________
+model_2 (Model)              (None, 48, 48, 1)         4344576   
+_________________________________________________________________
+model_3 (Model)              (None, 2)                 676352    
+=================================================================
+Total params: 5,020,928
+Trainable params: 4,343,680
+Non-trainable params: 677,248
+_________________________________________________________________
+
+IS: mean 3.990593433380127, stdv 0.0528222918510437 
+ FID: 0.07324142436251671

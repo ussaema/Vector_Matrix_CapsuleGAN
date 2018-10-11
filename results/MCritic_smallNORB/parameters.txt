@@ -1,0 +1,53 @@
+DATASET:
+{'param': {'target_patch': None, 'target_size': [48, 48, 1], 'target_shape': None, 'target_scale': [-1, 1], 'one_hot': True}, 'train': <__main__.DataLoader object at 0x7ff6b45b3588>, 'name': 'smallNORB', 'set': 'test', 'test': <__main__.DataLoader object at 0x7ff6b45b3550>}
+ 
+GENERATOR:
+{'param': {'output_shape': (48, 48, 1), 'DeConvNet': {'A': 8, 'iters': 1, 'optimizer': <keras.optimizers.Adam object at 0x7ff6b7cbfb70>}, 'topology': 'ConvNet', 'inputs_shape': (100,)}, 'train': None, 'name': 'generator', 'eval': None}
+ 
+DISCRIMINATOR:
+{'param': {'output_shape': (2,), 'VCapsNet': {'routing_iters': 3, 'L1_n': 256, 'L4_n': 512, 'iters': 1, 'L5_n': 1024, 'decoder_factor': 0.0005, 'L3_dim': 16, 'decoder': False, 'L2_n': 32, 'optimizer': <keras.optimizers.Adam object at 0x7ff6b7cbfba8>, 'L2_dim': 8}, 'inputs_shape': (48, 48, 1), 'Critic': {'optimizer': None, 'decoder': None, 'iters': 5}, 'MCapsNet': {'routing_iters': 2, 'L1_n': 8, 'L4_n': 8, 'iters': 1, 'pose_shape': [4, 4], 'L2_n': 8, 'optimizer': <keras.optimizers.Adam object at 0x7ff6b7cbfbe0>, 'decoder': False, 'L3_n': 8}, 'topology': 'ConvNet', 'ConvNet': {'optimizer': <keras.optimizers.Adam object at 0x7ff6b7cbfb38>, 'decoder': None, 'iters': 1}}, 'train': None, 'name': 'discriminator', 'eval': None}
+ 
+COMBINED:
+{'param': {'topology': 'WGAN_GP'}, 'train': None, 'name': 'gan', 'eval': None, 'iters': 1}
+ 
+TRAIN:
+{'param': {'train_samples': 24300, 'epochs': 100, 'batch_size': 100, 'checkpoint': {'interval': None, 'models': {'save': True}, 'logdir': './ConvNet_GAN_smallNORB_09-05_10-44/'}}, 'models_to_train': {'generator': None, 'discriminator': None}, 'debug': False, 'trained_models': {'D': None, 'G': None}}
+
+1s/step
+
+__________________________________________________________________________________________________
+Layer (type)                    Output Shape         Param #     Connected to                     
+==================================================================================================
+input_4 (InputLayer)            (None, 48, 48, 1)    0                                            
+__________________________________________________________________________________________________
+input_5 (InputLayer)            (None, 48, 48, 1)    0                                            
+__________________________________________________________________________________________________
+random_weighted_average_1 (Rand (None, 48, 48, 1)    0           input_4[0][0]                    
+                                                                 input_5[0][0]                    
+__________________________________________________________________________________________________
+model_3 (Model)                 (None, 2)            674816      input_4[0][0]                    
+                                                                 input_5[0][0]                    
+                                                                 random_weighted_average_1[0][0]  
+==================================================================================================
+Total params: 674,816
+Trainable params: 674,816
+Non-trainable params: 0
+__________________________________________________________________________________________________
+ConvNet_Up compiled
+ConvNet compiled
+_________________________________________________________________
+Layer (type)                 Output Shape              Param #   
+=================================================================
+input_6 (InputLayer)         (None, 100)               0         
+_________________________________________________________________
+model_2 (Model)              (None, 48, 48, 1)         4344576   
+_________________________________________________________________
+model_3 (Model)              (None, 2)                 674816    
+=================================================================
+Total params: 5,019,392
+Trainable params: 4,343,680
+Non-trainable params: 675,712
+_________________________________________________________________
+
+IS: mean 3.1564438343048096, stdv 0.03936310112476349 
+ FID: 0.13609672647923132
