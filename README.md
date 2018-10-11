@@ -31,6 +31,8 @@ It is also possible to train the discriminator (Vector CaspNet, Matrix CapsNet, 
 ## Scores
 ![enter image description here](https://github.com/ussaema/Vector_Matrix_CapsuleGAN/blob/master/imgs/scores.png?raw=true)
 
+Matrix CapsGAN failed to learn! Feel free to contact me and send suggestions about changes in the architecture, parameters, .... :)
+
 #### Copyright & License
 
 Copyright (C) 2018 Oussema Dhaouadi - TUM
