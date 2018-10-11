@@ -89,7 +89,7 @@ padme==1.1.1
 pandas==0.23.3
 pandoc==1.0.2
 pandocfilters==1.4.2
-paramiko==2.4.1
+
 parso==0.2.1
 pbr==4.2.0
 pexpect==4.6.0
