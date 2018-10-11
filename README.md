@@ -1,6 +1,6 @@
 # Capsule Generative Adversarial Networks
 **contact: oussema.dhaouadi@tum.de**  
-Models are trained using 2 GeForce GTX 1080 GPUs. All networks have been trained using early stopping which is triggered when no improvement on the generated samples is remarkable.
+Models were trained using 2 GeForce GTX 1080 GPUs. All networks were trained using early stopping which is triggered when no improvement on the generated samples is remarkable.
 An early stopping under the condition that the loss of the validation set has not been lowered in some straight epochs is not possible due to the alternation in optimising the losses of Minimax game. By cause of limitations in time and for the sake of comparison, a number of epochs has been set to 100.
 
 > git clone https://github.com/ussaema/Vector_Matrix_CapsuleGAN.git
