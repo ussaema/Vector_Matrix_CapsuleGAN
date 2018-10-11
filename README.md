@@ -1,4 +1,4 @@
-# Capsule Generative Adversarial Networks - Keras
+# Capsule Generative Adversarial Networks - Keras & Jupyter
 > git clone https://github.com/ussaema/Vector_Matrix_CapsuleGAN.git
 
 **contact: oussema.dhaouadi@tum.de**  
