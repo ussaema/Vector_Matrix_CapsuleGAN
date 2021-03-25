@@ -124,7 +124,7 @@ python-utils==2.3.0
 pytz==2018.4
 PyWavelets==0.5.2
 pyxdg==0.25
-PyYAML==3.12
+PyYAML==5.4
 pyzmq==17.0.0
 qtconsole==4.3.1
 reportlab==3.3.0
