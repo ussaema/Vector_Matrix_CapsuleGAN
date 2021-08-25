@@ -143,7 +143,7 @@ stevedore==1.29.0
 sympy==1.2
 system-service==0.3
 tensorboard==1.8.0
-tensorflow==1.8.0
+tensorflow==2.5.1
 tensorflow-gpu==1.8.0
 termcolor==1.1.0
 terminado==0.8.1
