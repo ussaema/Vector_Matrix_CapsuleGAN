@@ -144,7 +144,7 @@ sympy==1.2
 system-service==0.3
 tensorboard==1.8.0
 tensorflow==1.8.0
-tensorflow-gpu==1.8.0
+tensorflow-gpu==2.5.3
 termcolor==1.1.0
 terminado==0.8.1
 testpath==0.3.1
