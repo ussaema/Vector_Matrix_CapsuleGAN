@@ -34,7 +34,7 @@ gast==0.2.0
 grpcio==1.12.1
 guacamole==0.9.2
 h5py==2.8.0
-html5lib==0.9999999
+html5lib==0.99999999
 httplib2==0.9.1
 idna==2.7
 imgaug==0.2.6
