@@ -67,7 +67,7 @@ language-selector==0.1
 lightdm-gtk-greeter-settings==1.2.1
 louis==2.6.4
 lxml==4.0.0
-Mako==1.0.3
+Mako==1.2.2
 Markdown==2.6.11
 MarkupSafe==1.0
 matplotlib==2.2.2
