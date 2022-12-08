@@ -11,7 +11,7 @@ bleach==1.5.0
 blinker==1.3
 Brlapi==0.6.4
 catfish==1.4.2
-certifi==2018.4.16
+certifi==2022.12.7
 cffi==1.11.5
 chardet==2.3.0
 checkbox-support==0.22
