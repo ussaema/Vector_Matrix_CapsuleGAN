@@ -59,7 +59,7 @@ jupyterlab==0.32.1
 jupyterlab-launcher==0.10.5
 kaggle==1.4.6
 kaggle-cli==0.12.13
-Keras==2.2.2
+Keras==3.12.0
 Keras-Applications==1.0.4
 Keras-Preprocessing==1.0.2
 kiwisolver==1.0.1
